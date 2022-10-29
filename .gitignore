@@ -3,3 +3,5 @@ db.sqlite3
 __pycache__/
 .idea/
 media/
+.env.prod
+.env.prod.db
