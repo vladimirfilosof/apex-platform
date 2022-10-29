@@ -15,4 +15,5 @@ urlpatterns = [
     path('projects/', include(projects_router.urls)),
     path('products/', include(products_router.urls)),
     path('vote/', views.ProjectView),
+    path('products-on-project/<int:project_id>/', views.ProductsOnProjectView.as_view({'get': 'list'})),
 ]

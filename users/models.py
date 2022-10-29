@@ -59,10 +59,17 @@ class User(AbstractUser):
     #     AUTHOR = 'AU', _('Author')
 
     phone = models.CharField(max_length=17, validators=[phone_regex])
-    avatar = models.FileField(upload_to='avatars')
+    avatar = models.FileField(upload_to='avatars/', null=True, blank=True)
     # type = models.CharField(max_length=4, choices=TYPES.choices, default=TYPES.COMMON)
+
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def __str__(self):
+        return f"{self.full_name}"
 
 
 class Post(models.Model):
-    file = models.FileField(upload_to='posts')
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    file = models.FileField(upload_to='posts/')
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='posts')

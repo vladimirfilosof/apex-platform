@@ -1,3 +1,4 @@
+from django.db.models import Count
 from rest_framework import viewsets, mixins
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 
@@ -19,6 +20,20 @@ class ProjectView(ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class ProductsOnProjectView(viewsets.GenericViewSet, mixins.ListModelMixin):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset.filter(for_project=self.kwargs['project_id']).annotate(
+            is_vote=Count('votes__user', votes__user=self.request.user)
+        ).annotate(
+            vote_count=Count('votes')
+        ).order_by('-vote_count')
+
+        return queryset
 
 
 class VoteView(ModelViewSet):

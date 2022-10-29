@@ -2,6 +2,7 @@ from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 
 from projects import models
+from users.serializers import UserSerializer
 
 
 class ProductFilesSerializer(ModelSerializer):
@@ -12,6 +13,13 @@ class ProductFilesSerializer(ModelSerializer):
 
 class ProductSerializer(ModelSerializer):
     files = ProductFilesSerializer(many=True)
+    user = UserSerializer(many=False)
+    is_vote = serializers.BooleanField(
+        read_only=True
+    )
+    vote_count = serializers.IntegerField(
+        read_only=True
+    )
 
     class Meta:
         model = models.Product
@@ -19,11 +27,12 @@ class ProductSerializer(ModelSerializer):
 
 
 class ProjectSerializer(ModelSerializer):
-    file = serializers.FileField()
+    user = UserSerializer(many=False)
+    selected_work = ProductSerializer(many=False)
 
     class Meta:
         model = models.Project
-        fields = ('')
+        fields = '__all__'
 
 
 class VoteSerializer(ModelSerializer):

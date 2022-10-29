@@ -14,15 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from apex import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^auth/', include('djoser.urls')),
-
+    url(r'^auth/', include('djoser.urls.authtoken')),
     path('api/v1/', include([
         path('', include('projects.urls')),
+        path('', include('users.urls')),
+
     ]))
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
