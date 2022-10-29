@@ -1,0 +1,54 @@
+.headerTitle {
+  font-family: Raleway, sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 41px;
+  letter-spacing: -0.017em;
+
+  position: relative;
+  padding: 13px 10px 18px;
+
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 50px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: "";
+    background-color: #fff;
+    height: 5px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width ease-in-out 0.2s;
+  }
+
+  &:after {
+    content: "";
+    background-color: #fff;
+    height: 5px;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width ease-in-out 0.2s;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+
+    &:before {
+      width: 90px;
+    }
+
+    &:after {
+      width: 90px;
+    }
+  }
+}

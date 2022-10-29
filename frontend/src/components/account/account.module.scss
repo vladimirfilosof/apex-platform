@@ -1,0 +1,136 @@
+.lvl {
+  font-family: Raleway, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.017em;
+  color: #55E8DF;
+
+  display: flex;
+  align-items: center;
+
+  span {
+    font-family: Outfit, sans-serif;
+  }
+}
+
+.accountName {
+  font-family: Raleway, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.017em;
+}
+
+
+.accountHeaderTitle {
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.017em;
+  margin-bottom: 15px;
+}
+
+.cardsWrapper {
+  display: flex;
+  width: 100%;
+  margin: -15px;
+}
+
+.card {
+  width: calc(25% - 30px);
+  margin: 15px;
+}
+
+.otherHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+
+  border-top: 2px solid #55E8DF;
+  border-bottom: 2px solid #55E8DF;
+  .lvl {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 45px;
+  }
+  .accountName {
+    font-size: 40px;
+    line-height: 25px;
+  }
+}
+
+.emptyPublications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 2px solid #55E8DF;
+}
+
+.emptyPublicationsIcon {
+  height: 75px;
+  width: 75px;
+  margin-bottom: 25px;
+}
+
+.emptyPublicationsText {
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.017em;
+  text-align: center;
+  color: #55E8DF;
+}
+
+.addPublication {
+  display: flex;
+  align-items: center;
+
+  font-family: Raleway, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.017em;
+  color: #55E8DF;
+  cursor: pointer;
+
+  img {
+    height: 29px;
+    margin-right: 10px;
+  }
+}
+
+.publications {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.publicationCard {
+  margin-bottom: 30px;
+}
+
+.fileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.formButton {
+  background: transparent;
+  border: 2px solid #55E8DF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-top: 15px;
+}

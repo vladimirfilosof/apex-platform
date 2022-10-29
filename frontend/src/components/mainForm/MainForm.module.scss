@@ -1,0 +1,135 @@
+.formWrapper {
+  width: 810px;
+  margin: 0 auto;
+  background-color: #6E27F1;
+  border-radius: 10px;
+
+  padding: 10px;
+}
+
+.formBlock {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #23163D;
+
+}
+
+.formHeader {
+  display: flex;
+  width: 100%;
+  background-color: #6E27F1;
+
+}
+
+.formTabWrapper {
+  flex: 1;
+}
+
+.formTabWrapper:not(.formTabActive) {
+  background: #6E27F1;
+  &:last-of-type {
+    .formTab {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+    }
+  }
+  &:first-of-type {
+    .formTab {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+    }
+  }
+}
+
+.formTabWrapper.formTabActive {
+  background: #23163D;
+
+  .formTab {
+    background-color: #6E27F1;
+  }
+  &:last-of-type {
+    .formTab {
+      border-bottom-left-radius: 10px;
+    }
+  }
+  &:first-of-type {
+    .formTab {
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.formTab {
+  font-family: Raleway;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.017em;
+  text-align: center;
+  padding: 25px;
+  //border-top-right-radius: 10px;
+  cursor: pointer;
+  background: #23163D;
+}
+
+.formBodyWrapper {
+  background-color: #6E27F1;
+
+}
+
+.formBody {
+  padding: 100px;
+  padding-bottom: 20px;
+  background: #23163D;
+  border-radius: 10px;
+}
+
+.inputGrid {
+  display: grid;
+  gap: 30px;
+  //grid-template-columns: 1fr 1fr;
+}
+
+.input {
+  background: #FFFFFF;
+  border: 2px solid #6E27F1;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px 13px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.017em;
+  text-align: left;
+
+  &:focus {
+    outline: none;
+  }
+  &:target {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
+}
+
+.buttonSend {
+  font-family: Raleway;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.017em;
+  text-align: center;
+  text-decoration-line: underline;
+  //display: inline-block;
+  padding: 25px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: none;
+  border:none;
+  outline: none;
+}

@@ -1,0 +1,99 @@
+.contestProduct {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+.contestProductContent {
+  height: 360px;
+  width: 360px;
+  border: 2px solid #55E8DF;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contestProductWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.slidesWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  transition: left ease-in-out 0.2s;
+}
+
+.slide {
+  height: 360px;
+  width: 360px;
+  display: block;
+
+  img {
+    height: 360px;
+    width: 360px;
+    object-fit: cover;
+
+  }
+}
+
+.bottomPane {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.iconPerson {
+  height: 24px;
+  width: 24px;
+  margin-right: 30px;
+}
+
+.iconLike {
+  height: 26px;
+  width: 29px;
+  margin-right: 30px;
+}
+
+.countLikes {
+  font-family: Outfit;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.017em;
+  color: #55E8DF;
+}
+
+@mixin arrow() {
+  position: absolute;
+  bottom: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+
+  img {
+    height: 24px;
+    width: 15px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.arrowLeft {
+  @include arrow();
+  left: 12px;
+  transform: rotate(180deg);
+}
+
+.arrowRight {
+  @include arrow();
+  right: 12px;
+}

@@ -1,0 +1,130 @@
+.banner {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #55E8DF;
+
+  background-position: center center;
+  background-size: cover;
+  padding: 35px;
+  height: 600px;
+
+  display: flex;
+  //align-items: center;
+  position: relative;
+  text-decoration: none;
+
+  &Content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &Title {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: -0.017em;
+    text-align: center;
+    color: #000000;
+
+    margin-bottom: 20px;
+  }
+
+  &Date {
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -0.017em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &Price {
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -0.017em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 15px;
+    }
+  }
+  &.long {
+    height: 700px;
+  }
+}
+
+.miniBanner {
+  height: 360px;
+  width: 100%;
+  .bannerTitle {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 13px;
+  }
+  .bannerDate {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  .bannerPrice {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.futureWrapper {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.futureBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.futureTitle {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.017em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.futureDate {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.017em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.disabled {
+  position: absolute;
+  background-color: rgba(86, 77, 103, 0.6);
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 10px;
+  z-index: 0;
+}
+
