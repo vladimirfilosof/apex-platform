@@ -1,9 +1,9 @@
-FROM node:12-alpine as build
+FROM node:14-alpine as build
 WORKDIR /frontend
 COPY package.json /frontend/package.json
-RUN npm install --only=prod
+RUN yarn install --only=prod
 COPY . /frontend
-RUN npm run build
+RUN yarn build
 
 
 FROM nginx:1.19.0-alpine

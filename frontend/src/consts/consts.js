@@ -1,1 +1,1 @@
-export const serverHost = "http://127.0.0.1:8000"
+export const serverHost = "https://api.apex.itfilosof.ru"

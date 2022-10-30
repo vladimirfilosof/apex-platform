@@ -4,9 +4,10 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn apex.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/backend/static
+      - media_volume:/home/app/backend/media
     ports:
       - 8000:8000
     networks:
@@ -33,12 +34,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
+      - 443:443
     networks:
       - server
     volumes:
       - front-build:/frontend/build
       - static_volume:/home/app/backend/static
       - media_volume:/home/app/backend/media
+      - /etc/letsencrypt/:/etc/letsencrypt/
 
     container_name: frontend
 
