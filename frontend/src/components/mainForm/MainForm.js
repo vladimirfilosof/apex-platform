@@ -9,7 +9,7 @@ export default function MainForm() {
 
 	const forms = [
 		<LoginForm />,
-		// <RegisterForm />
+		<RegisterForm />
 	]
 
 	return (
