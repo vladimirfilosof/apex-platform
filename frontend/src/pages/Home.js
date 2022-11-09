@@ -35,8 +35,8 @@ export default function Home() {
 					{listProjects.length !== 0 ? <Banner backgroundImage={listProjects[0].image} link={"/project/"+listProjects[0].id} title={listProjects[0].title} price={listProjects[0].price} /> : null}
 					<h2 className={"blockHeader"} style={{marginTop: "64px"}}>Предстоящие соревнования</h2>
 					<FutureWrapper>
-						<FutureBanner backgroundImage={f1} title={"СВАДЕБНАЯ СЪЕМКА"} date={"1-15 НОЯБРЯ"} disable={true}/>
-						<FutureBanner backgroundImage={f2} title={"NEON FEST"} date={"10-20 ДЕКАБРЯ"} disable={true}/>
+						<FutureBanner backgroundImage={f2} title={"СВАДЕБНАЯ СЪЕМКА"} date={"1-15 ДЕКАБРЯ"} disable={true}/>
+						<FutureBanner backgroundImage={f1} title={"NEON FEST"} date={"10-20 ДЕКАБРЯ"} disable={true}/>
 					</FutureWrapper>
 				</Container>
 			</main>

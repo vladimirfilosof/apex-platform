@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
-from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,10 +25,10 @@ SECRET_KEY = 'django-insecure-vwgi^guh7j(yr2jbl*7xw7cn0h+t-6%&5ur6(y=%#ffr&s1)kj
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'api.apex.itfilosof.ru', 
-    'https://api.apex.itfilosof.ru', 
-    'apex.itfilosof.ru', 
-    'https://apex.itfilosof.ru', 
+    'api.apex.itfilosof.ru',
+    'https://api.apex.itfilosof.ru',
+    'apex.itfilosof.ru',
+    'https://apex.itfilosof.ru',
     'http://localhost:3000'
     ]
 # Application definition
@@ -172,7 +170,7 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
 
 
