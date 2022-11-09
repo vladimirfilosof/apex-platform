@@ -48,7 +48,7 @@ export default function Project() {
 						<div className={styles.projectBannerHeader}>
 							<div style={{marginRight: "25px"}}>
 								<h2 className={"blockHeader"}>Автор конкурса</h2>
-								<Avatar src={project.user.avatar}/>
+								<a href={"/account/" + project.user.id}><Avatar src={project.user.avatar}/></a>
 							</div>
 							<div style={{width: "100%"}}>
 								<h2 className={"blockHeader"}>Карточка конкурса</h2>
