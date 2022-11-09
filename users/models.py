@@ -73,3 +73,6 @@ class User(AbstractUser):
 class Post(models.Model):
     file = models.FileField(upload_to='posts/')
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='posts')
+
+    def __str__(self):
+        return f"{self.user}"

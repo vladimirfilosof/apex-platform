@@ -7,7 +7,7 @@ services:
     command: gunicorn apex.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/backend/static
-      - /etc/letsencrypt/live/:/etc/letsencrypt/live/
+      - media_volume:/home/app/backend/media
     ports:
       - 8000:8000
     networks:
@@ -41,7 +41,7 @@ services:
       - front-build:/frontend/build
       - static_volume:/home/app/backend/static
       - media_volume:/home/app/backend/media
-      - /etc/letsencrypt/live/:/etc/letsencrypt/live/
+      - /etc/letsencrypt/:/etc/letsencrypt/
 
     container_name: frontend
 

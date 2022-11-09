@@ -24,7 +24,13 @@ SECRET_KEY = 'django-insecure-vwgi^guh7j(yr2jbl*7xw7cn0h+t-6%&5ur6(y=%#ffr&s1)kj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'http://127.0.0.1', 'localhost', 'http://localhost', 'http://localhost:3000']
+ALLOWED_HOSTS = [
+    'api.apex.itfilosof.ru',
+    'https://api.apex.itfilosof.ru',
+    'apex.itfilosof.ru',
+    'https://apex.itfilosof.ru',
+    'http://localhost:3000'
+    ]
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://127.0.0.1', 'http://localhost', 'http://localhost:3000']
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1', 'http://localhost', 'http://localhost:3000', 'https://api.apex.itfilosof.ru',  'https://apex.itfilosof.ru']
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -161,14 +167,22 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/'
+
+
+
+# STATICFILES_DIRS = (
+#     os.path.join(PROJECT_ROOT, 'assets'),
+# )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

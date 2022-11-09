@@ -43,8 +43,9 @@ RUN pip install --no-cache /wheels/*
 COPY ./entrypoint.prod.sh $APP_HOME
 # copy project
 COPY . $APP_HOME
+RUN python3 manage.py collectstatic --noinput
 # chown all the files to the app user
-RUN chown -R app:app $APP_HOME
+RUN chown -R app:app $HOME
 # change to the app user
 USER app
 # run entrypoint.prod.sh
